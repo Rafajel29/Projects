@@ -1,0 +1,121 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/fjf46/FLT/src
+vDW_div
+!s110 1574021117
+!i10b 1
+!s100 Qn8GE?J37hU012Znh:96U0
+I]jW3^ZZ88FbI9dEggOaS43
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1477550329
+8/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/dw/dw02/src_ver/DW_div.v
+F/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/dw/dw02/src_ver/DW_div.v
+F/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/dw/dw02/src_ver/DW_div_function.inc
+L0 35
+Z2 OP;L;10.7a;67
+r1
+!s85 0
+31
+!s108 1574021116.000000
+!s107 /opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/dw/dw02/src_ver/DW_div_function.inc|/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/dw/dw02/src_ver/DW_div.v|
+!s90 -work|work|/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/dw/dw02/src_ver/DW_div.v|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+n@d@w_div
+vDW_sincos
+!s110 1574021103
+!i10b 1
+!s100 mPgdKBV>dIN=SFa70L=Tk0
+IB;:aS2Fde8A0L>lzXH1Oe3
+R1
+R0
+w1477550322
+8/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/dw/dw02/src_ver/DW_sincos.v
+F/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/dw/dw02/src_ver/DW_sincos.v
+L0 60
+R2
+r1
+!s85 0
+31
+!s108 1574021102.000000
+!s107 /opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/dw/dw02/src_ver/DW_sincos.v|
+!s90 -work|work|/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/dw/dw02/src_ver/DW_sincos.v|
+!i113 1
+R3
+R4
+n@d@w_sincos
+vFF
+!s110 1574020957
+!i10b 1
+!s100 1zn@GDcb>^c]IZ1HD=aB_2
+Ie[`e54k7Gjz>_O2]9@mE[1
+R1
+R0
+w1573176298
+8../src/FF.v
+F../src/FF.v
+Z5 L0 14
+R2
+r1
+!s85 0
+31
+!s108 1574020956.000000
+!s107 ../src/FF.v|
+!s90 -work|work|../src/FF.v|
+!i113 1
+R3
+R4
+n@f@f
+vFLT
+!s110 1574022547
+!i10b 1
+!s100 <JAgL6`gZ0Pf7GlIVj_6C0
+IXXojj<`>@JoG>0@`L^9QY2
+R1
+R0
+w1574022550
+8../src/FLT.v
+F../src/FLT.v
+L0 19
+R2
+r1
+!s85 0
+31
+!s108 1574022547.000000
+!s107 ../src/FLT.v|
+!s90 -work|work|../src/FLT.v|
+!i113 1
+R3
+R4
+n@f@l@t
+vFLT_TB
+!s110 1574021490
+!i10b 1
+!s100 XJmPYm3aJJe4LbQzfH2jd0
+Iia36n7FH:j45?P[;BZB<>0
+R1
+R0
+w1574021457
+8../tb/FLT_TB.v
+F../tb/FLT_TB.v
+R5
+R2
+r1
+!s85 0
+31
+!s108 1574021489.000000
+!s107 ../tb/FLT_TB.v|
+!s90 -work|work|../tb/FLT_TB.v|
+!i113 1
+R3
+R4
+n@f@l@t_@t@b

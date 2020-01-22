@@ -1,0 +1,5 @@
+echo "Ready to transmit file"
+scp /drives/c/Users/songh/OneDrive\ -\ Cornell\ University/ECE5746/Homework/HW9/verilog\ 3.0/src/FLT.v hs994@vip-brg.ece.cornell.edu:~/FLT/src
+scp /drives/c/Users/songh/OneDrive\ -\ Cornell\ University/ECE5746/Homework/HW9/verilog\ 3.0/tb/RND_FLT_in.txt hs994@vip-brg.ece.cornell.edu:~/FLT/tb;
+scp /drives/c/Users/songh/OneDrive\ -\ Cornell\ University/ECE5746/Homework/HW9/verilog\ 3.0/tb/RND_FLT_out.txt hs994@vip-brg.ece.cornell.edu:~/FLT/tb
+echo "Transmission complete"

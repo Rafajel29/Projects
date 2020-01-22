@@ -1,0 +1,21 @@
+Initializing gui preferences from file  /home/fjf46/.synopsys_dv_prefs.tcl
+dc_shell> analyze -library work -format verilog ../src/FF.v
+Running PRESTO HDLC
+Compiling source file ../src/FF.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+1
+dc_shell> analyze -library work -format verilog ../src/FF.v
+Running PRESTO HDLC
+Compiling source file ../src/FF.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+1
+dc_shell> pdw
+Error: unknown command 'pdw' (CMD-005)
+dc_shell> pwd
+/home/ece5746/fjf46/FLT/src
+dc_shell> exit
+
+Thank you...
+

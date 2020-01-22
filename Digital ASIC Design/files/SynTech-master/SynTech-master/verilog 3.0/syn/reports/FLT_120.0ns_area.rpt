@@ -1,0 +1,54 @@
+ 
+****************************************
+Report : area
+Design : FLT
+Version: M-2016.12
+Date   : Sat Dec 14 20:07:40 2019
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /work/global/brg/install/adk-pkgs/saed-90nm/pkgs/SAED_EDK90nm_01252011/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/saed90nm_typ.db)
+
+Number of ports:                          599
+Number of nets:                         21046
+Number of cells:                        18251
+Number of combinational cells:          17779
+Number of sequential cells:               463
+Number of macros/black boxes:               0
+Number of buf/inv:                       1689
+Number of references:                      54
+
+Combinational area:             217556.583739
+Buf/Inv area:                     9358.848240
+Noncombinational area:           14846.054619
+Macro/Black Box area:                0.000000
+Net Interconnect area:           42290.891384
+
+Total cell area:                232402.638358
+Total area:                     274693.529742
+
+The above information was reported from the logical library. The following are from the physical library:
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area              Local cell area
+                                  --------------------  ------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-   Black-
+                                  Total        Total    national     national    boxes   Design
+--------------------------------  -----------  -------  -----------  ----------  ------  -----------------
+FLT                               232402.6384    100.0  216769.5373   7074.2017  0.0000  FLT
+FF_DIV_OUT                           822.9888      0.4     210.1248    612.8640  0.0000  FF_DATA_WIDTH20
+FF_FLT_IN                            784.2816      0.3      11.0592    773.2224  0.0000  FF_DATA_WIDTH24
+FF_a2_minus                         1382.4000      0.6     350.2080   1032.1920  0.0000  FF_DATA_WIDTH32_4
+FF_cos_OUT                           822.9888      0.4     210.1248    612.8640  0.0000  FF_DATA_WIDTH19_1
+FF_sin_OUT                           612.8640      0.3       0.0000    612.8640  0.0000  FF_DATA_WIDTH19_0
+FF_x1                               1032.1920      0.4       0.0000   1032.1920  0.0000  FF_DATA_WIDTH32_3
+FF_x2                               1036.8000      0.4       5.5296   1031.2704  0.0000  FF_DATA_WIDTH32_2
+FF_y1                               1032.1920      0.4       0.0000   1032.1920  0.0000  FF_DATA_WIDTH32_1
+FF_y2                               1032.1920      0.4       0.0000   1032.1920  0.0000  FF_DATA_WIDTH32_0
+--------------------------------  -----------  -------  -----------  ----------  ------  -----------------
+Total                                                   217556.5837  14846.0546  0.0000
+
+1
