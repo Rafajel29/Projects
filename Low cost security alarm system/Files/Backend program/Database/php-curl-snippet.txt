@@ -1,0 +1,14 @@
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'http://www.google.co.za');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (CP/M; 8-bit)');
+    curl_setopt($ch, CURLOPT_TIMEOUT, 15);
+    curl_setopt($ch, CURLOPT_PROXY, 'cache9.p.nwu.ac.za:80');
+    curl_setopt($ch, CURLOPT_PROXYUSERPWD, 'username:password');
+#    curl_setopt($ch, CURLOPT_VERBOSE, 1);
+
+    $retdata = curl_exec($ch);
+#    echo curl_error($ch)."\n";
+
+    if ($retdata !== FALSE)
+        echo $retdata;

@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>sec1.png</file>
+        <file>sec2.png</file>
+        <file>sec3.jpg</file>
+        <file>frame.png</file>
+        <file>scroll.png</file>
+    </qresource>
+</RCC>
