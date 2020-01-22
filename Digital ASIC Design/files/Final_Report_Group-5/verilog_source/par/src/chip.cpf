@@ -1,0 +1,64 @@
+#######################################################################
+# Copyright (C) 2019 Oscar Castaneda (oc66@cornell.edu), ETH Zurich,
+#                    and University of Bologna
+# This script is used specifically for Cornell ECE5746.
+# Do not share or distribute this script.
+# Do not post it in a public repository.
+#######################################################################
+
+set_cpf_version 1.1
+
+#######################################################################################
+###### Power architecture  specification
+#######################################################################################
+set_hierarchy_separator "/"
+
+#######################################################################################
+###Setting top level design 
+#######################################################################################
+set_design ${DESIGNFULL}
+
+set cell_path "/work/global/brg/install/adk-pkgs/saed-90nm/pkgs/SAED_EDK90nm_01252011/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models"
+
+define_library_set -name l_tc \
+   -libraries \
+    [list $cell_path/saed90nm_typ.lib]
+
+#######################################################################################
+## Power domains
+#######################################################################################
+create_power_domain -name PD_CORE -default
+
+#######################################################################################
+## Nominal conditions
+#######################################################################################
+create_nominal_condition -name NOMINAL     -voltage 1.2 -state on
+update_nominal_condition -name NOMINAL     -library_set l_tc
+
+#######################################################################################
+#### Creating Power Modes
+#######################################################################################
+create_power_mode -name PM_NOMINAL -domain_conditions { PD_CORE@NOMINAL } -default
+
+#######################################################################################
+#### Power Nets
+#######################################################################################
+
+# Create power nets
+create_power_nets  -nets VDD
+create_ground_nets -nets VSS
+
+#######################################################################################
+#### Power Nets Connections
+#######################################################################################
+
+create_global_connection -net VDD -pins VDD
+create_global_connection -net VSS -pins VSS
+
+#######################################################################################
+#### Update Power Domain
+#######################################################################################
+
+update_power_domain -name PD_CORE -primary_power_net VDD   -primary_ground_net VSS
+
+end_design

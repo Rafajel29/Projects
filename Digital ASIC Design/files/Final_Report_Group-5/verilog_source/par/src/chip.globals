@@ -1,0 +1,19 @@
+#######################################################################
+# Copyright (C) 2019 Oscar Castaneda (oc66@cornell.edu), ETH Zurich,
+#                    and University of Bologna
+# This script is used specifically for Cornell ECE5746.
+# Do not share or distribute this script.
+# Do not post it in a public repository.
+#######################################################################
+
+set defHierChar {/}
+set init_verilog "../syn/outputs/${DESIGNNAME}.v"
+set init_design_settop 0
+
+set init_lef_file {/work/local/ece5746/saed90nm_tech.lef \
+                   /work/global/brg/install/adk-pkgs/saed-90nm/pkgs/SAED_EDK90nm_01252011/SAED_EDK90nm/Digital_Standard_cell_Library/lef/saed90nm.lef \
+                  }
+
+set init_import_mode {-treatUndefinedCellAsBbox 0 -keepEmptyModule 1}
+
+set init_mmmc_file "./src/chip_mmmc.view.tcl"
