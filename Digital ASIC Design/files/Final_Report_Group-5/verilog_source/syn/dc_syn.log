@@ -1,0 +1,652 @@
+Initializing gui preferences from file  /home/hs994/.synopsys_dv_prefs.tcl
+################################################################################################################################
+set DESIGN_NAME "FLT"
+FLT
+#Set up number of cores
+set_host_option -max_core $NUM_CORES
+1
+#Clean previous designs
+remove_design -designs
+1
+sh rm -rf work/*
+################################################################################################################################
+#Analyze design
+#Verilog files
+analyze -library work -format verilog {         ../src/FF.v     ../src/DW_div_seq.v     /opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/dw/dw02/src_ver/DW_sincos.v       ../src/FLT.v }
+Running PRESTO HDLC
+Compiling source file ../src/FF.v
+Compiling source file ../src/DW_div_seq.v
+Compiling source file /opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/dw/dw02/src_ver/DW_sincos.v
+Compiling source file ../src/FLT.v
+Presto compilation completed successfully.
+Loading db file '/work/global/brg/install/adk-pkgs/saed-90nm/pkgs/SAED_EDK90nm_01252011/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/saed90nm_typ.db'
+Loading db file '/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/libraries/syn/dw_foundation.sldb'
+Loading db file '/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/libraries/syn/dft_jtag.sldb'
+Loading db file '/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/libraries/syn/dft_lbist.sldb'
+Loading db file '/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/libraries/syn/dft_mbist.sldb'
+Loading db file '/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/libraries/syn/standard.sldb'
+1
+#Elaborate design (with default parameters)
+elaborate ${DESIGN_NAME} -library work
+Loading db file '/opt/synopsys/M-2016.12/synopsys-dc-M-2016.12/libraries/syn/gtech.db'
+  Loading link library 'saed90nm_typ'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ../src/FLT.v:71: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../src/FLT.v:72: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../src/FLT.v:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../src/FLT.v:74: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../src/FLT.v:158: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:174: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:187: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:190: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../src/FLT.v:208: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:225: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:227: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:242: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:245: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:307: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:309: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:324: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:339: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:349: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../src/FLT.v:353: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:355: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:356: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:371: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../src/FLT.v:386: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine FLT line 137 in file
+                '../src/FLT.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| parameter_memory_reg | Flip-flop |  90   |  Y  | N  | Y  | N  | N  | N  | N  |
+| parameter_memory_reg | Flip-flop |  37   |  Y  | N  | N  | Y  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine FLT line 247 in file
+                '../src/FLT.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   a0_enable_S_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'FLT'.
+Information: Building the design 'FF' instantiated from design 'FLT' with
+        the parameters "DATA_WIDTH=19". (HDL-193)
+
+Inferred memory devices in process
+        in routine FF_DATA_WIDTH19 line 28 in file
+                '../src/FF.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      Q_DO_reg       | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FF' instantiated from design 'FLT' with
+        the parameters "DATA_WIDTH=32". (HDL-193)
+
+Inferred memory devices in process
+        in routine FF_DATA_WIDTH32 line 28 in file
+                '../src/FF.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      Q_DO_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FF' instantiated from design 'FLT' with
+        the parameters "DATA_WIDTH=20". (HDL-193)
+
+Inferred memory devices in process
+        in routine FF_DATA_WIDTH20 line 28 in file
+                '../src/FF.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      Q_DO_reg       | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FF' instantiated from design 'FLT' with
+        the parameters "DATA_WIDTH=24". (HDL-193)
+
+Inferred memory devices in process
+        in routine FF_DATA_WIDTH24 line 28 in file
+                '../src/FF.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      Q_DO_reg       | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+current_design ${DESIGN_NAME}
+Current design is 'FLT'.
+{FLT}
+################################################################################################################################
+#Define constraints
+set CLK_PERIOD  120.0
+120.0
+#set CLK_UNCERT  0.0
+#set CLK_LAT_MAX 1
+#set CLK_LAT_MIN 0.9
+#set IN_DEL_MIN  0.2
+#set IN_DEL_MAX  0.2
+#set OUT_DEL_MIN 0.2
+#set OUT_DEL_MAX 0.2
+#
+#create_clock           Clk_CI        -period $CLK_PERIOD
+#set_clock_uncertainty  $CLK_UNCERT  [ get_clocks Clk_CI ]
+#set_clock_transition   0.2          [ get_clocks Clk_CI ]
+#set_clock_latency -max $CLK_LAT_MAX [ get_clocks Clk_CI ]
+#set_clock_latency -min $CLK_LAT_MIN [ get_clocks Clk_CI ]
+#
+#set_input_delay   -min [expr $IN_DEL_MIN ] -clock Clk_CI [remove_from_collection [all_inputs] [get_ports {Clk_CI}]]
+#set_input_delay   -max [expr $IN_DEL_MAX ] -clock Clk_CI [remove_from_collection [all_inputs] [get_ports {Clk_CI}]]
+#set_output_delay  -min [expr $OUT_DEL_MIN] -clock Clk_CI [all_outputs]
+#set_output_delay  -max [expr $OUT_DEL_MAX] -clock Clk_CI [all_outputs]
+#
+##set_driving_cell -no_design_rule -library sc9mcpp140_cln28hpc_base_svt_c30_ss_cworst_max_0p81v_125c -lib_cell INV_X1M_A9PP140TS_C30 -pin Y [all_inputs]
+#set_driving_cell saed90nm_typ -lib_cell INVX4 -pin ZN [all_inputs]
+#set_load 0.01 [all_outputs]
+create_clock Clk_CI -period $CLK_PERIOD;
+1
+set_clock_transition 0.2 [get_clocks Clk_CI];
+1
+set_input_delay 0.2 -clock Clk_CI [remove_from_collection [all_inputs] [get_ports Clk_CI]];
+1
+set_driving_cell -library saed90nm_typ -lib_cell INVX4 -pin ZN [all_inputs];
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+1
+set_load 0.01 [all_outputs];
+1
+################################################################################################################################
+#Compile design
+compile_ultra -no_autoungroup
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 2 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | M-2016.12-DWBB_201612.0 |     *     |
+| Licensed DW Building Blocks        | M-2016.12-DWBB_201612.0 |     *     |
+| dft_jtag.sldb                      | M-2016.12-DWBB_201612.0 |     *     |
+| dft_lbist.sldb                     | M-2016.12-DWBB_201612.0 |     *     |
+| dft_mbist.sldb                     | M-2016.12-DWBB_201612.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 31 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 2 instances of design 'FF_DATA_WIDTH19'. (OPT-1056)
+Information: Uniquified 5 instances of design 'FF_DATA_WIDTH32'. (OPT-1056)
+  Simplifying Design 'FLT'
+
+Loaded alib file './alib-52/saed90nm_typ.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'FLT'
+ Implement Synthetic for 'FLT'.
+  Processing 'FLT_DW_div_seq_J1_0'
+  Processing 'FLT_DW01_absval_J1_0'
+  Processing 'FLT_DW_cntr_scnto_J1_0'
+
+Statistics for case statements in always block at line 481 in file
+        './DW_sincos__rtl.v.e'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           483            |    auto/auto     |
+|           742            |    auto/auto     |
+|           1065           |    auto/auto     |
+|           1710           |    auto/auto     |
+===============================================
+  Processing 'FLT_DW_sincos_J1_0'
+
+Statistics for case statements in always block at line 481 in file
+        './DW_sincos__rtl.v.e'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           483            |    auto/auto     |
+|           742            |    auto/auto     |
+|           1065           |    auto/auto     |
+|           1710           |    auto/auto     |
+===============================================
+  Processing 'FLT_DW_sincos_J1_1'
+Information: Added key list 'DesignWare' to design 'FLT'. (DDB-72)
+Information: The register 'FLT_div_a0_inv/aInt_sign_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'FLT_div_a0_inv/a_sign_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'FLT_div_a0_inv/b_sign_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'FLT_div_a0_inv/b_reg_reg[18]' is a constant and will be removed. (OPT-1206)
+  Processing 'FF_DATA_WIDTH32_0'
+  Processing 'FF_DATA_WIDTH32_4'
+  Processing 'FF_DATA_WIDTH24'
+  Processing 'FF_DATA_WIDTH20'
+  Processing 'FF_DATA_WIDTH19_1'
+  Processing 'FF_DATA_WIDTH19_0'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The register 'FF_DIV_OUT/Q_DO_reg[19]' is a constant and will be removed. (OPT-1206)
+
+Threshold voltage group cell usage:
+>> saed90cell_svt 100.00%
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+..
+  Mapping Optimization (Phase 1)
+
+Threshold voltage group cell usage:
+>> saed90cell_svt 100.00%
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+Threshold voltage group cell usage:
+>> saed90cell_svt 100.00%
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'FLT_DP_OP_36J1_122_6483_0'
+  Selecting critical implementations
+  Mapping 'FLT_DW_mult_tc_0'
+  Mapping 'FLT_DW_mult_tc_1'
+  Mapping 'FLT_DP_OP_38J1_124_5835_0'
+  Mapping 'FLT_DW_mult_tc_2'
+  Mapping 'FLT_DW_mult_tc_3'
+
+Threshold voltage group cell usage:
+>> saed90cell_svt 100.00%
+
+  Beginning Isolate Ports
+  -----------------------
+
+Threshold voltage group cell usage:
+>> saed90cell_svt 100.00%
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:08  237839.2    121.56    5205.6       0.0                           1193882496.0000
+    0:01:27  244778.8     14.31     604.0       0.0                           1238436608.0000
+    0:01:27  244778.8     14.31     604.0       0.0                           1238436608.0000
+    0:01:28  244740.1     14.21     588.9       0.0                           1238610688.0000
+
+Threshold voltage group cell usage:
+>> saed90cell_svt 100.00%
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:01:49  236643.8     13.80     521.4       0.0                           1183917568.0000
+    0:01:51  234362.0     13.74     512.1       0.0                           1172421376.0000
+    0:01:53  232238.6     13.74     501.1       0.0                           1148084352.0000
+    0:01:53  232238.6     13.74     501.1       0.0                           1148084352.0000
+    0:01:54  232619.2     12.21     472.3       0.0                           1151982976.0000
+    0:01:54  232619.2     12.21     472.3       0.0                           1151982976.0000
+    0:01:54  232619.2     12.21     472.3       0.0                           1151982976.0000
+    0:01:54  232619.2     12.21     472.3       0.0                           1151982976.0000
+    0:01:54  232619.2     12.21     472.3       0.0                           1151982976.0000
+    0:01:54  232619.2     12.21     472.3       0.0                           1151982976.0000
+    0:02:16  236508.4      1.05      11.0       0.0                           1185594496.0000
+    0:02:16  236508.4      1.05      11.0       0.0                           1185594496.0000
+    0:02:19  237429.0      0.80       5.1       0.0                           1191466240.0000
+    0:02:19  237429.0      0.80       5.1       0.0                           1191466240.0000
+    0:02:22  237866.8      0.00       0.0       0.0                           1195161984.0000
+    0:02:22  237866.8      0.00       0.0       0.0                           1195161984.0000
+    0:02:22  237866.8      0.00       0.0       0.0                           1195161984.0000
+    0:02:22  237866.8      0.00       0.0       0.0                           1195161984.0000
+    0:02:22  237866.8      0.00       0.0       0.0                           1195161984.0000
+    0:02:22  237866.8      0.00       0.0       0.0                           1195161984.0000
+    0:02:22  237866.8      0.00       0.0       0.0                           1195161984.0000
+    0:02:22  237866.8      0.00       0.0       0.0                           1195161984.0000
+    0:02:22  237866.8      0.00       0.0       0.0                           1195161984.0000
+
+Threshold voltage group cell usage:
+>> saed90cell_svt 100.00%
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:22  237866.8      0.00       0.0       0.0                           1195161984.0000
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+Information: Complementing port 'Q_DO[0]' in design 'FF_DATA_WIDTH19_1'.
+         The new name of the port is 'Q_DO[0]_BAR'. (OPT-319)
+Information: Complementing port 'Q_DO[0]' in design 'FF_DATA_WIDTH32_4'.
+         The new name of the port is 'Q_DO[0]_BAR'. (OPT-319)
+Information: Complementing port 'Q_DO[0]' in design 'FF_DATA_WIDTH20'.
+         The new name of the port is 'Q_DO[0]_BAR'. (OPT-319)
+Information: Complementing port 'Q_DO[0]' in design 'FF_DATA_WIDTH24'.
+         The new name of the port is 'Q_DO[0]_BAR'. (OPT-319)
+    0:02:36  232808.1      0.00       0.0       0.2                           1142106112.0000
+    0:02:36  232808.1      0.00       0.0       0.2                           1142106112.0000
+    0:02:36  232808.1      0.00       0.0       0.2                           1142106112.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+    0:02:38  232541.8      0.00       0.0       0.2                           1137398400.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:39  232519.7      0.00       0.0       0.2                           1137271808.0000
+    0:02:40  232241.4     10.99     151.6       0.3                           1134350976.0000
+    0:02:41  232624.7      0.00       0.0       0.2                           1136533632.0000
+    0:02:41  232624.7      0.00       0.0       0.2                           1136533632.0000
+    0:02:42  232511.4      0.00       0.0       0.2                           1135600384.0000
+    0:02:43  232445.0      0.00       0.0       0.0                           1134690560.0000
+    0:02:43  232445.0      0.00       0.0       0.0                           1134690560.0000
+    0:02:43  232445.0      0.00       0.0       0.0                           1134690560.0000
+    0:02:43  232445.0      0.00       0.0       0.0                           1134690560.0000
+    0:02:44  232402.6      0.00       0.0       0.0                           1134051968.0000
+Loading db file '/work/global/brg/install/adk-pkgs/saed-90nm/pkgs/SAED_EDK90nm_01252011/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/saed90nm_typ.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     M-2016.12
+Date:        Sat Dec 14 20:07:39 2019
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      9
+    Unconnected ports (LINT-28)                                     9
+
+Cells                                                               8
+    Connected to power or ground (LINT-32)                          7
+    Hier pins without driver and load (LINT-60)                     1
+--------------------------------------------------------------------------------
+
+Warning: In design 'FF_DATA_WIDTH19_0', port 'WrEn_SI' is not connected to any nets. (LINT-28)
+Warning: In design 'FF_DATA_WIDTH32_4', port 'D_DI[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'FF_DATA_WIDTH20', port 'D_DI[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'FF_DATA_WIDTH20', port 'Q_DO[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'FF_DATA_WIDTH24', port 'WrEn_SI' is not connected to any nets. (LINT-28)
+Warning: In design 'FF_DATA_WIDTH32_3', port 'WrEn_SI' is not connected to any nets. (LINT-28)
+Warning: In design 'FF_DATA_WIDTH32_0', port 'WrEn_SI' is not connected to any nets. (LINT-28)
+Warning: In design 'FF_DATA_WIDTH32_1', port 'WrEn_SI' is not connected to any nets. (LINT-28)
+Warning: In design 'FF_DATA_WIDTH32_2', port 'WrEn_SI' is not connected to any nets. (LINT-28)
+Warning: In design 'FLT', a pin on submodule 'FF_sin_OUT' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'WrEn_SI' is connected to logic 1. 
+Warning: In design 'FLT', a pin on submodule 'FF_a2_minus' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'D_DI[31]' is connected to logic 1. 
+Warning: In design 'FLT', a pin on submodule 'FF_FLT_IN' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'WrEn_SI' is connected to logic 1. 
+Warning: In design 'FLT', a pin on submodule 'FF_x1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'WrEn_SI' is connected to logic 1. 
+Warning: In design 'FLT', a pin on submodule 'FF_x2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'WrEn_SI' is connected to logic 1. 
+Warning: In design 'FLT', a pin on submodule 'FF_y1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'WrEn_SI' is connected to logic 1. 
+Warning: In design 'FLT', a pin on submodule 'FF_y2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'WrEn_SI' is connected to logic 1. 
+Warning: In design 'FLT', input pin 'D_DI[19]' of hierarchical cell 'FF_DIV_OUT' has no internal loads and is not connected to any nets. (LINT-60)
+1
+################################################################################################################################
+#Reports
+report_timing -max_paths 5 > ./reports/${DESIGN_NAME}_${CLK_PERIOD}ns_timing_max.rpt
+report_timing -delay min -max_paths 5 > ./reports/${DESIGN_NAME}_${CLK_PERIOD}ns_timing_min.rpt
+report_area -physical -hierarchy > ./reports/${DESIGN_NAME}_${CLK_PERIOD}ns_area.rpt
+#report_power -net -cell -hierarchy > ./reports/${DESIGN_NAME}_${CLK_PERIOD}ns_power.rpt
+################################################################################################################################
+#Add dummy nets for unconnected pins /Not used in quentin nor mr wolf
+define_name_rules verilog -add_dummy_nets
+1
+define_name_rules verilog -replacement_char x
+1
+define_name_rules verilog -case_insensitive
+1
+#Save the design database
+write -format ddc -hierarchy -output ./outputs/${DESIGN_NAME}_${CLK_PERIOD}ns.ddc  
+Writing ddc file './outputs/FLT_120.0ns.ddc'.
+1
+#Change names for Verilog
+change_names -rule verilog -hierarchy
+1
+write_sdc -nosplit ./outputs/${DESIGN_NAME}_${CLK_PERIOD}ns.sdc
+1
+write -format verilog -hierarchy -output ./outputs/${DESIGN_NAME}_${CLK_PERIOD}ns.v
+Writing verilog file '/home/ece5746/hs994/FLT/syn/outputs/FLT_120.0ns.v'.
+1
+write_parasitics -format distributed -output ./outputs/${DESIGN_NAME}_${CLK_PERIOD}ns.spef 
+Information: Using the '-format distributed' option is not recommended. This option will be removed in a future release.  See the man page for more information.  (INFO-109)
+Information: Writing parasitics to file '/home/ece5746/hs994/FLT/syn/outputs/FLT_120.0ns.spef'. (WP-3)
+0
+write_sdf ./outputs/${DESIGN_NAME}_${CLK_PERIOD}ns.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/ece5746/hs994/FLT/syn/outputs/FLT_120.0ns.sdf'. (WT-3)
+1
+1
+dc_shell> CEXIT
+Error: unknown command 'CEXIT' (CMD-005)
+dc_shell> exit
+
+Thank you...
+
