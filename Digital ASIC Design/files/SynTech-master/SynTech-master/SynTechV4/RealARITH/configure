@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# call CLS-wide mex configure
+
+${HOME}/clstools/libexec/mexconfigure
