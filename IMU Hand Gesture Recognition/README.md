@@ -1,6 +1,4 @@
-READ ME
-
-IMU Hand Gesture Recognition
+# IMU Hand Gesture Recognition Project
 
 Contents of submission (type of file) (description)
 1. test (folder) (Place test data text files in folder)
