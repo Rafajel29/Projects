@@ -1,6 +1,4 @@
-#README
-
-Reinforcement Learning on MDP Environments Project
+# Reinforcement Learning on MDP Environments Project
 
 The python programs where written in Jupyter Notebook in the anaconda enviorement on Python 3
 
