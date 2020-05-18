@@ -1,0 +1,40 @@
+
+test1.txt.csv  predict:
+Prediction 1 :  wave  loglikelihood Score:  -930.4849
+Prediction 2 :  eight  loglikelihood Score:  -5923.4644
+Prediction 3 :  inf  loglikelihood Score:  -6054.4604
+
+test2.txt.csv  predict:
+Prediction 1 :  beat4  loglikelihood Score:  -2576.531
+Prediction 2 :  beat3  loglikelihood Score:  -9037.258
+Prediction 3 :  wave  loglikelihood Score:  -14126.494
+
+test3.txt.csv  predict:
+Prediction 1 :  inf  loglikelihood Score:  -2108.1953
+Prediction 2 :  eight  loglikelihood Score:  -9601.328
+Prediction 3 :  beat3  loglikelihood Score:  -11351.646
+
+test4.txt.csv  predict:
+Prediction 1 :  beat3  loglikelihood Score:  -2575.7068
+Prediction 2 :  beat4  loglikelihood Score:  -9990.876
+Prediction 3 :  wave  loglikelihood Score:  -10719.304
+
+test5.txt.csv  predict:
+Prediction 1 :  circle  loglikelihood Score:  -1280.5011
+Prediction 2 :  beat4  loglikelihood Score:  -6831.035
+Prediction 3 :  beat3  loglikelihood Score:  -7342.445
+
+test6.txt.csv  predict:
+Prediction 1 :  inf  loglikelihood Score:  -2070.7397
+Prediction 2 :  eight  loglikelihood Score:  -11106.5
+Prediction 3 :  beat3  loglikelihood Score:  -13137.83
+
+test7.txt.csv  predict:
+Prediction 1 :  eight  loglikelihood Score:  -2151.1997
+Prediction 2 :  inf  loglikelihood Score:  -7951.5386
+Prediction 3 :  beat3  loglikelihood Score:  -10257.709
+
+test8.txt.csv  predict:
+Prediction 1 :  beat4  loglikelihood Score:  -2442.9631
+Prediction 2 :  beat3  loglikelihood Score:  -8629.619
+Prediction 3 :  wave  loglikelihood Score:  -13166.727
