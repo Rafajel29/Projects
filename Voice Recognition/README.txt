@@ -1,3 +1,1 @@
-Read Me
-
-Voice Recognition Project Report
+# Voice Recognition Project Project
