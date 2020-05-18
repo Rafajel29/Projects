@@ -1,6 +1,4 @@
-Read Me
-
-Robot Localization and Mapping
+# Robot Localization and Mapping Project
 
 To run for different files at the start of each program change the file variable number to that of the file you want to run
 
