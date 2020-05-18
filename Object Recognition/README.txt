@@ -1,6 +1,4 @@
-Read Me
-
-Object recognition project
+# Object recognition project
 
 Put Test_Set Folder in same directory as Final.py
 Open Final.py in normal python IDE (I used spyder with Anaconda)
